@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mint Appz - Store</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/store.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Mint Appz</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/store" class="nav-link active">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/upload" class="nav-link">Upload</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/account" class="nav-link">Account</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/docs" class="nav-link">Docs</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="store-header">
+            <div class="container">
+                <h1>App Store</h1>
+                <p>Browse and download amazing applications</p>
+            </div>
+        </section>
+
+        <section class="store-filters">
+            <div class="container">
+                <div class="filters-row">
+                    <div class="search-container">
+                        <input type="text" id="storeSearch" placeholder="Search apps..." class="search-input">
+                        <button class="search-btn" id="searchBtn">Search</button>
+                    </div>
+                    <div class="filter-container">
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="">All Categories</option>
+                            <option value="games">Games</option>
+                            <option value="productivity">Productivity</option>
+                            <option value="social">Social</option>
+                            <option value="education">Education</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="store-content">
+            <div class="container">
+                <div class="results-info">
+                    <span id="resultsCount">Loading apps...</span>
+                </div>
+                <div class="apps-grid" id="storeApps">
+                    <!-- Apps will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mint Appz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/store.js"></script>
+</body>
+</html>

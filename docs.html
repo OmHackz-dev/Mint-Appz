@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Mint Appz</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/docs.css">
+    <link rel="icon" type="image/svg+xml" href="user_read_only_context/text_attachments/mint-appz-lI1mG.svg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="user_read_only_context/text_attachments/mint-appz-lI1mG.svg" alt="Mint Appz" class="nav-logo">
+                <span class="nav-title">Mint Appz</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="store.html">Store</a>
+                <a href="account.html">Account</a>
+                <a href="upload.html">Upload</a>
+                <a href="docs.html" class="active">Docs</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="docs-container">
+        <aside class="docs-sidebar" id="docsSidebar">
+            <div class="sidebar-header">
+                <h3>Documentation</h3>
+                <button class="sidebar-toggle" id="sidebarToggle">×</button>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h4>Getting Started</h4>
+                    <ul>
+                        <li><a href="#overview" class="nav-link active">Overview</a></li>
+                        <li><a href="#quick-start" class="nav-link">Quick Start</a></li>
+                        <li><a href="#system-requirements" class="nav-link">System Requirements</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h4>User Guide</h4>
+                    <ul>
+                        <li><a href="#browsing-apps" class="nav-link">Browsing Apps</a></li>
+                        <li><a href="#downloading-apps" class="nav-link">Downloading Apps</a></li>
+                        <li><a href="#account-management" class="nav-link">Account Management</a></li>
+                        <li><a href="#search-filters" class="nav-link">Search & Filters</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h4>Developer Guide</h4>
+                    <ul>
+                        <li><a href="#uploading-apps" class="nav-link">Uploading Apps</a></li>
+                        <li><a href="#app-guidelines" class="nav-link">App Guidelines</a></li>
+                        <li><a href="#review-process" class="nav-link">Review Process</a></li>
+                        <li><a href="#app-management" class="nav-link">App Management</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h4>API Reference</h4>
+                    <ul>
+                        <li><a href="#api-overview" class="nav-link">API Overview</a></li>
+                        <li><a href="#authentication" class="nav-link">Authentication</a></li>
+                        <li><a href="#endpoints" class="nav-link">Endpoints</a></li>
+                        <li><a href="#rate-limits" class="nav-link">Rate Limits</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="#troubleshooting" class="nav-link">Troubleshooting</a></li>
+                        <li><a href="#contact" class="nav-link">Contact Support</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="docs-content">
+            <div class="mobile-sidebar-toggle">
+                <button id="mobileSidebarToggle">☰ Documentation Menu</button>
+            </div>
+
+            <!-- Overview Section -->
+            <section id="overview" class="doc-section active">
+                <h1>Welcome to Mint Appz Documentation</h1>
+                <p class="lead">Your comprehensive guide to using and developing for the Mint Appz platform.</p>
+                
+                <div class="overview-cards">
+                    <div class="overview-card">
+                        <div class="card-icon">📱</div>
+                        <h3>For Users</h3>
+                        <p>Discover, download, and manage your favorite Android applications with ease.</p>
+                        <a href="#browsing-apps" class="card-link">Browse Apps Guide →</a>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">👨‍💻</div>
+                        <h3>For Developers</h3>
+                        <p>Upload, manage, and distribute your Android applications to our community.</p>
+                        <a href="#uploading-apps" class="card-link">Developer Guide →</a>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">🔧</div>
+                        <h3>API Integration</h3>
+                        <p>Integrate with our platform using our comprehensive REST API.</p>
+                        <a href="#api-overview" class="card-link">API Reference →</a>
+                    </div>
+                </div>
+
+                <div class="feature-highlight">
+                    <h2>What is Mint Appz?</h2>
+                    <p>Mint Appz is a modern Android application distribution platform that connects users with high-quality applications. Our platform offers:</p>
+                    <ul>
+                        <li><strong>Curated App Store:</strong> Carefully reviewed applications for quality and security</li>
+                        <li><strong>Developer-Friendly:</strong> Easy upload and management tools for app developers</li>
+                        <li><strong>User-Centric:</strong> Intuitive browsing, searching, and downloading experience</li>
+                        <li><strong>Community-Driven:</strong> User reviews and ratings to help you find the best apps</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Quick Start Section -->
+            <section id="quick-start" class="doc-section">
+                <h1>Quick Start Guide</h1>
+                <p>Get up and running with Mint Appz in just a few minutes.</p>
+
+                <div class="quick-start-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Create Your Account</h3>
+                            <p>Sign up for a free Mint Appz account to access all features.</p>
+                            <a href="account.html" class="btn btn-primary">Create Account</a>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Browse the Store</h3>
+                            <p>Explore our collection of Android applications across various categories.</p>
+                            <a href="store.html" class="btn btn-secondary">Browse Store</a>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Download & Install</h3>
+                            <p>Download APK files and install them on your Android device.</p>
+                            <code>Settings → Security → Unknown Sources → Enable</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- System Requirements Section -->
+            <section id="system-requirements" class="doc-section">
+                <h1>System Requirements</h1>
+                
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <h3>🌐 Web Browser</h3>
+                        <ul>
+                            <li>Chrome 90+ (Recommended)</li>
+                            <li>Firefox 88+</li>
+                            <li>Safari 14+</li>
+                            <li>Edge 90+</li>
+                        </ul>
+                    </div>
+                    <div class="requirement-card">
+                        <h3>📱 Android Device</h3>
+                        <ul>
+                            <li>Android 5.0+ (API Level 21)</li>
+                            <li>2GB RAM minimum</li>
+                            <li>Unknown Sources enabled</li>
+                            <li>Internet connection</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Browsing Apps Section -->
+            <section id="browsing-apps" class="doc-section">
+                <h1>Browsing Apps</h1>
+                <p>Learn how to effectively browse and discover applications on Mint Appz.</p>
+
+                <h2>Navigation</h2>
+                <p>Use the main navigation to access different sections:</p>
+                <ul>
+                    <li><strong>Home:</strong> Featured apps and latest releases</li>
+                    <li><strong>Store:</strong> Complete app catalog with search and filters</li>
+                    <li><strong>Categories:</strong> Browse by app category (Games, Productivity, etc.)</li>
+                </ul>
+
+                <h2>Search Functionality</h2>
+                <p>Our powerful search helps you find exactly what you're looking for:</p>
+                <ul>
+                    <li>Search by app name or description</li>
+                    <li>Filter by category, rating, or download count</li>
+                    <li>Sort by popularity, newest, or highest rated</li>
+                </ul>
+
+                <div class="code-example">
+                    <h3>Search Tips</h3>
+                    <ul>
+                        <li>Use specific keywords for better results</li>
+                        <li>Try different category filters</li>
+                        <li>Check the "New Releases" section for latest apps</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Downloading Apps Section -->
+            <section id="downloading-apps" class="doc-section">
+                <h1>Downloading Apps</h1>
+                <p>Step-by-step guide to downloading and installing applications.</p>
+
+                <div class="warning-box">
+                    <h3>⚠️ Important Security Notice</h3>
+                    <p>Only download apps from trusted sources. Mint Appz reviews all applications, but always verify app permissions before installation.</p>
+                </div>
+
+                <h2>Download Process</h2>
+                <ol>
+                    <li>Click on any app to view its details page</li>
+                    <li>Review app information, screenshots, and user reviews</li>
+                    <li>Click the "Download APK" button</li>
+                    <li>Your browser will download the APK file</li>
+                </ol>
+
+                <h2>Installation Steps</h2>
+                <ol>
+                    <li>Enable "Unknown Sources" in your Android settings</li>
+                    <li>Navigate to your Downloads folder</li>
+                    <li>Tap the APK file to begin installation</li>
+                    <li>Follow the on-screen prompts</li>
+                </ol>
+
+                <div class="code-example">
+                    <h3>Enable Unknown Sources</h3>
+                    <p><code>Settings → Security → Unknown Sources → Toggle ON</code></p>
+                    <p><em>Path may vary depending on your Android version</em></p>
+                </div>
+            </section>
+
+            <!-- Account Management Section -->
+            <section id="account-management" class="doc-section">
+                <h1>Account Management</h1>
+                <p>Manage your Mint Appz account settings and preferences.</p>
+
+                <h2>Account Features</h2>
+                <ul>
+                    <li><strong>Download History:</strong> Track all your downloaded applications</li>
+                    <li><strong>Favorites:</strong> Save apps for later download</li>
+                    <li><strong>Reviews:</strong> Rate and review applications</li>
+                    <li><strong>Developer Tools:</strong> Upload and manage your own apps</li>
+                </ul>
+
+                <h2>Profile Settings</h2>
+                <p>Customize your account preferences:</p>
+                <ul>
+                    <li>Update personal information</li>
+                    <li>Change password</li>
+                    <li>Notification preferences</li>
+                    <li>Privacy settings</li>
+                </ul>
+            </section>
+
+            <!-- Developer Guide Sections -->
+            <section id="uploading-apps" class="doc-section">
+                <h1>Uploading Apps</h1>
+                <p>Complete guide for developers to upload and distribute their applications.</p>
+
+                <h2>Prerequisites</h2>
+                <ul>
+                    <li>Valid Mint Appz developer account</li>
+                    <li>Signed APK file (recommended)</li>
+                    <li>App icon (512x512 PNG recommended)</li>
+                    <li>App description and screenshots</li>
+                </ul>
+
+                <h2>Upload Process</h2>
+                <ol>
+                    <li>Navigate to the <a href="upload.html">Upload page</a></li>
+                    <li>Fill in the app information form</li>
+                    <li>Provide app name and description</li>
+                    <li>Select appropriate category</li>
+                    <li>Upload app icon URL</li>
+                    <li>Provide APK download URL</li>
+                    <li>Submit for review</li>
+                </ol>
+
+                <div class="info-box">
+                    <h3>📝 App Information Required</h3>
+                    <ul>
+                        <li><strong>Name:</strong> Clear, descriptive app name</li>
+                        <li><strong>Description:</strong> Detailed app functionality</li>
+                        <li><strong>Category:</strong> Most relevant category</li>
+                        <li><strong>Icon URL:</strong> Direct link to app icon</li>
+                        <li><strong>APK URL:</strong> Direct download link</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="app-guidelines" class="doc-section">
+                <h1>App Guidelines</h1>
+                <p>Guidelines and requirements for app submission.</p>
+
+                <h2>Content Guidelines</h2>
+                <ul>
+                    <li>Apps must be functional and provide value to users</li>
+                    <li>No malicious code or security vulnerabilities</li>
+                    <li>Respect user privacy and data protection</li>
+                    <li>No copyright infringement or illegal content</li>
+                    <li>Appropriate content ratings</li>
+                </ul>
+
+                <h2>Technical Requirements</h2>
+                <ul>
+                    <li>APK must be properly signed</li>
+                    <li>Target Android API level 21 or higher</li>
+                    <li>App size should be reasonable for functionality</li>
+                    <li>Proper permission declarations</li>
+                    <li>Crash-free operation</li>
+                </ul>
+
+                <div class="warning-box">
+                    <h3>🚫 Prohibited Content</h3>
+                    <ul>
+                        <li>Malware, viruses, or harmful code</li>
+                        <li>Adult or inappropriate content</li>
+                        <li>Gambling or illegal activities</li>
+                        <li>Spam or misleading information</li>
+                        <li>Copyright-infringing material</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- API Reference Sections -->
+            <section id="api-overview" class="doc-section">
+                <h1>API Overview</h1>
+                <p>Integrate with Mint Appz using our REST API.</p>
+
+                <h2>Base URL</h2>
+                <div class="code-example">
+                    <code>https://api.mintappz.com/v1</code>
+                </div>
+
+                <h2>Authentication</h2>
+                <p>All API requests require authentication using API keys.</p>
+                <div class="code-example">
+                    <pre><code>Authorization: Bearer YOUR_API_KEY</code></pre>
+                </div>
+
+                <h2>Response Format</h2>
+                <p>All responses are in JSON format:</p>
+                <div class="code-example">
+                    <pre><code>{
+  "success": true,
+  "data": {...},
+  "message": "Request successful"
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="endpoints" class="doc-section">
+                <h1>API Endpoints</h1>
+                <p>Complete reference of available API endpoints.</p>
+
+                <h2>Apps Endpoints</h2>
+                <div class="endpoint">
+                    <div class="endpoint-method get">GET</div>
+                    <div class="endpoint-path">/apps</div>
+                    <div class="endpoint-desc">Get list of all apps</div>
+                </div>
+                <div class="endpoint">
+                    <div class="endpoint-method get">GET</div>
+                    <div class="endpoint-path">/apps/{id}</div>
+                    <div class="endpoint-desc">Get specific app details</div>
+                </div>
+                <div class="endpoint">
+                    <div class="endpoint-method post">POST</div>
+                    <div class="endpoint-path">/apps</div>
+                    <div class="endpoint-desc">Create new app</div>
+                </div>
+
+                <h2>User Endpoints</h2>
+                <div class="endpoint">
+                    <div class="endpoint-method get">GET</div>
+                    <div class="endpoint-path">/users/profile</div>
+                    <div class="endpoint-desc">Get user profile</div>
+                </div>
+                <div class="endpoint">
+                    <div class="endpoint-method put">PUT</div>
+                    <div class="endpoint-path">/users/profile</div>
+                    <div class="endpoint-desc">Update user profile</div>
+                </div>
+            </section>
+
+            <!-- Support Sections -->
+            <section id="faq" class="doc-section">
+                <h1>Frequently Asked Questions</h1>
+
+                <div class="faq-item">
+                    <h3>How do I install apps from Mint Appz?</h3>
+                    <p>Download the APK file and enable "Unknown Sources" in your Android settings, then tap the APK to install.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Are the apps safe to download?</h3>
+                    <p>Yes, all apps go through our review process to ensure they meet our security and quality standards.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I upload my own apps?</h3>
+                    <p>Yes! Create a developer account and use our upload tool to submit your applications for review.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is Mint Appz free to use?</h3>
+                    <p>Yes, Mint Appz is completely free for both users and developers.</p>
+                </div>
+            </section>
+
+            <section id="troubleshooting" class="doc-section">
+                <h1>Troubleshooting</h1>
+
+                <h2>Common Issues</h2>
+                
+                <div class="troubleshoot-item">
+                    <h3>App won't install</h3>
+                    <ul>
+                        <li>Enable "Unknown Sources" in Android settings</li>
+                        <li>Check available storage space</li>
+                        <li>Ensure APK file downloaded completely</li>
+                        <li>Try redownloading the APK</li>
+                    </ul>
+                </div>
+
+                <div class="troubleshoot-item">
+                    <h3>Download fails</h3>
+                    <ul>
+                        <li>Check internet connection</li>
+                        <li>Clear browser cache</li>
+                        <li>Try a different browser</li>
+                        <li>Disable ad blockers temporarily</li>
+                    </ul>
+                </div>
+
+                <div class="troubleshoot-item">
+                    <h3>Account issues</h3>
+                    <ul>
+                        <li>Reset password if login fails</li>
+                        <li>Check email for verification links</li>
+                        <li>Clear browser cookies</li>
+                        <li>Contact support if problems persist</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="contact" class="doc-section">
+                <h1>Contact Support</h1>
+                <p>Need help? We're here to assist you.</p>
+
+                <div class="contact-options">
+                    <div class="contact-card">
+                        <h3>📧 Email Support</h3>
+                        <p>Get help via email</p>
+                        <a href="mailto:support@mintappz.com" class="btn btn-primary">support@mintappz.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <h3>💬 Live Chat</h3>
+                        <p>Chat with our support team</p>
+                        <button class="btn btn-secondary" onclick="alert('Live chat coming soon!')">Start Chat</button>
+                    </div>
+                    <div class="contact-card">
+                        <h3>📚 Community</h3>
+                        <p>Join our community forum</p>
+                        <button class="btn btn-secondary" onclick="alert('Community forum coming soon!')">Visit Forum</button>
+                    </div>
+                </div>
+
+                <div class="support-hours">
+                    <h3>Support Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM (UTC)</p>
+                    <p>Weekend: Limited support available</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/docs.js"></script>
+</body>
+</html>

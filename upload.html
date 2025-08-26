@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mint Appz - Upload App</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/upload.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Mint Appz</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/store" class="nav-link">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/upload" class="nav-link active">Upload</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/account" class="nav-link">Account</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/docs" class="nav-link">Docs</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Authentication Required Message -->
+            <div class="auth-required hidden" id="authRequired">
+                <div class="auth-message">
+                    <h2>Authentication Required</h2>
+                    <p>You need to be signed in to upload and manage apps.</p>
+                    <div class="auth-actions">
+                        <a href="/account" class="btn btn-primary">Sign In</a>
+                        <a href="/account" class="btn btn-outline">Create Account</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upload Content (shown when authenticated) -->
+            <div class="upload-content hidden" id="uploadContent">
+                <div class="page-header">
+                    <h1 id="pageTitle">Upload New App</h1>
+                    <p id="pageDescription">Share your amazing app with the Mint Appz community</p>
+                </div>
+
+                <!-- Upload Form -->
+                <div class="upload-form-container">
+                    <form id="uploadForm" class="upload-form">
+                        <div class="form-section">
+                            <h3>App Information</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="appName" class="form-label">App Name *</label>
+                                    <input type="text" id="appName" class="form-input" required maxlength="50">
+                                    <small class="form-help">Choose a clear, descriptive name for your app</small>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="appCategory" class="form-label">Category *</label>
+                                    <select id="appCategory" class="form-input" required>
+                                        <option value="">Select a category</option>
+                                        <option value="games">Games</option>
+                                        <option value="productivity">Productivity</option>
+                                        <option value="social">Social</option>
+                                        <option value="education">Education</option>
+                                        <option value="entertainment">Entertainment</option>
+                                        <option value="utilities">Utilities</option>
+                                        <option value="health">Health & Fitness</option>
+                                        <option value="business">Business</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="appDescription" class="form-label">Description *</label>
+                                <textarea id="appDescription" class="form-input" rows="4" required maxlength="500" placeholder="Describe what your app does, its key features, and what makes it special..."></textarea>
+                                <div class="char-counter">
+                                    <span id="descriptionCounter">0</span>/500 characters
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="appVersion" class="form-label">Version *</label>
+                                    <input type="text" id="appVersion" class="form-input" required placeholder="1.0.0">
+                                    <small class="form-help">Use semantic versioning (e.g., 1.0.0)</small>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="appSize" class="form-label">App Size *</label>
+                                    <input type="text" id="appSize" class="form-input" required placeholder="25MB">
+                                    <small class="form-help">Approximate file size (e.g., 25MB, 1.2GB)</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>App Assets</h3>
+                            
+                            <div class="form-group">
+                                <label for="appIcon" class="form-label">App Icon URL *</label>
+                                <input type="url" id="appIcon" class="form-input" required placeholder="https://example.com/icon.png">
+                                <small class="form-help">Direct link to your app icon (PNG, JPG, 512x512px recommended)</small>
+                                <div class="icon-preview">
+                                    <img id="iconPreview" src="/placeholder.svg" alt="Icon Preview" class="hidden">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="appScreenshots" class="form-label">Screenshots (Optional)</label>
+                                <textarea id="appScreenshots" class="form-input" rows="3" placeholder="https://example.com/screenshot1.png&#10;https://example.com/screenshot2.png&#10;https://example.com/screenshot3.png"></textarea>
+                                <small class="form-help">One URL per line. Up to 5 screenshots.</small>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Download Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="appDownloadUrl" class="form-label">APK Download URL *</label>
+                                <input type="url" id="appDownloadUrl" class="form-input" required placeholder="https://example.com/myapp.apk">
+                                <small class="form-help">Direct download link to your APK file</small>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="minAndroidVersion" class="form-label">Minimum Android Version</label>
+                                    <select id="minAndroidVersion" class="form-input">
+                                        <option value="">Select minimum version</option>
+                                        <option value="4.4">Android 4.4 (API 19)</option>
+                                        <option value="5.0">Android 5.0 (API 21)</option>
+                                        <option value="6.0">Android 6.0 (API 23)</option>
+                                        <option value="7.0">Android 7.0 (API 24)</option>
+                                        <option value="8.0">Android 8.0 (API 26)</option>
+                                        <option value="9.0">Android 9.0 (API 28)</option>
+                                        <option value="10.0">Android 10 (API 29)</option>
+                                        <option value="11.0">Android 11 (API 30)</option>
+                                        <option value="12.0">Android 12 (API 31)</option>
+                                        <option value="13.0">Android 13 (API 33)</option>
+                                        <option value="14.0">Android 14 (API 34)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="isFeatured">
+                                        <span class="checkmark"></span>
+                                        Request to be featured
+                                    </label>
+                                    <small class="form-help">High-quality apps may be featured on the homepage</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Additional Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="appTags" class="form-label">Tags (Optional)</label>
+                                <input type="text" id="appTags" class="form-input" placeholder="photo, editor, filters, creative">
+                                <small class="form-help">Comma-separated tags to help users find your app</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="developerWebsite" class="form-label">Developer Website (Optional)</label>
+                                <input type="url" id="developerWebsite" class="form-input" placeholder="https://yourwebsite.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="supportEmail" class="form-label">Support Email (Optional)</label>
+                                <input type="email" id="supportEmail" class="form-input" placeholder="support@yourapp.com">
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" id="cancelBtn">Cancel</button>
+                            <button type="button" class="btn btn-secondary" id="previewBtn">Preview</button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <span id="submitText">Upload App</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Manage Apps Section -->
+                <div class="manage-apps-section">
+                    <div class="section-header">
+                        <h2>Manage Your Apps</h2>
+                        <p>Edit or delete your uploaded apps</p>
+                    </div>
+
+                    <div class="apps-filter">
+                        <div class="filter-controls">
+                            <select id="statusFilter" class="filter-select">
+                                <option value="">All Status</option>
+                                <option value="published">Published</option>
+                                <option value="pending">Pending Review</option>
+                                <option value="rejected">Rejected</option>
+                                <option value="draft">Draft</option>
+                            </select>
+                            
+                            <select id="categoryFilter" class="filter-select">
+                                <option value="">All Categories</option>
+                                <option value="games">Games</option>
+                                <option value="productivity">Productivity</option>
+                                <option value="social">Social</option>
+                                <option value="education">Education</option>
+                                <option value="entertainment">Entertainment</option>
+                                <option value="utilities">Utilities</option>
+                                <option value="health">Health & Fitness</option>
+                                <option value="business">Business</option>
+                            </select>
+
+                            <button class="btn btn-outline" id="refreshApps">Refresh</button>
+                        </div>
+                    </div>
+
+                    <div class="user-apps-container">
+                        <div class="user-apps-grid" id="userAppsGrid">
+                            <!-- User apps will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- App Preview Modal -->
+    <div class="modal hidden" id="previewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>App Preview</h3>
+                <button class="modal-close" id="closePreview">&times;</button>
+            </div>
+            <div class="modal-body" id="previewContent">
+                <!-- Preview content will be generated here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="closePreviewBtn">Close</button>
+                <button class="btn btn-primary" id="confirmUpload">Confirm Upload</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mint Appz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/upload.js"></script>
+</body>
+</html>

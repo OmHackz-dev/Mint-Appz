@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mint Appz - Home</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Mint Appz</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/store" class="nav-link">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/upload" class="nav-link">Upload</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/account" class="nav-link">Account</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/docs" class="nav-link">Docs</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>Discover Amazing Apps</h1>
+                <p>Find and download the best mobile applications from our curated collection</p>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search for apps..." class="search-input">
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2>Categories</h2>
+                <div class="category-grid">
+                    <div class="category-card" data-category="games">
+                        <h3>Games</h3>
+                        <p>Fun and entertaining games</p>
+                    </div>
+                    <div class="category-card" data-category="productivity">
+                        <h3>Productivity</h3>
+                        <p>Tools to boost your efficiency</p>
+                    </div>
+                    <div class="category-card" data-category="social">
+                        <h3>Social</h3>
+                        <p>Connect with friends and family</p>
+                    </div>
+                    <div class="category-card" data-category="education">
+                        <h3>Education</h3>
+                        <p>Learn something new every day</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-apps">
+            <div class="container">
+                <h2>Featured Apps</h2>
+                <div class="apps-grid" id="featuredApps">
+                    <!-- Featured apps will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mint Appz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
